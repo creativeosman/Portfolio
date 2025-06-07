@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>App Developer Muhammad Osman | Android & Kotlin Portfolio</title>
-  <meta name="description" content="Official portfolio of Muhammad Osman, expert Android App Developer. Explore Kotlin, Jetpack Compose, and Java projects at devmuhammadosman.com." />
-  <meta name="keywords" content="App Developer Muhammad Osman, Android Developer, Kotlin, Jetpack Compose, Java, Mobile App Developer, devmuhammadosman" />
+  <meta name="description"
+    content="Official portfolio of Muhammad Osman, expert Android App Developer. Explore Kotlin, Jetpack Compose, and Java projects at devmuhammadosman.com." />
+  <meta name="keywords"
+    content="App Developer Muhammad Osman, Android Developer, Kotlin, Jetpack Compose, Java, Mobile App Developer, devmuhammadosman" />
   <meta name="author" content="Muhammad Osman" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="App Developer Muhammad Osman" />
-  <meta property="og:description" content="Explore Android app projects, skills, and contact details of developer Muhammad Osman." />
+  <meta property="og:description"
+    content="Explore Android app projects, skills, and contact details of developer Muhammad Osman." />
   <meta property="og:image" content="https://devmuhammadosman.com/assets/profile-pic.jpg" />
   <meta property="og:url" content="https://devmuhammadosman.com" />
   <meta property="og:type" content="website" />
@@ -49,10 +52,8 @@
   </script>
 </head>
 
-
-
 <body>
-  <nav id="desktop-nav">
+  <nav id="desktop-nav" class="fade-in">
     <div class="logo">Creative Usman</div>
     <div>
       <ul class="nav-links">
@@ -63,7 +64,7 @@
       </ul>
     </div>
   </nav>
-  <nav id="hamburger-nav">
+  <nav id="hamburger-nav" class="fade-in">
     <div class="logo">Muhammad Usman</div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
@@ -79,7 +80,7 @@
       </div>
     </div>
   </nav>
-  <section id="profile">
+  <section id="profile" class="slide-up">
     <div class="section__pic-container">
       <img src="./assets/profile-pic.jpg" alt="Muhammad Usman profile picture" class="profile-picture" />
     </div>
@@ -103,7 +104,7 @@
       </div>
     </div>
   </section>
-  <section id="about">
+  <section id="about" class="fade-in-on-scroll">
     <p class="section__text__p1">Get To Know More</p>
     <h1 class="title">About Me</h1>
     <div class="section-container">
@@ -136,7 +137,7 @@
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
   </section>
-  <section id="experience">
+  <section id="experience" class="fade-in-on-scroll">
     <p class="section__text__p1">Explore My</p>
     <h1 class="title">Experience</h1>
     <div class="experience-details-container">
@@ -201,31 +202,44 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Problem Solving</h3>
-                <p>Intermediate</p>
+                <h3>JSON</h3>
+                <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>DSA</h3>
-                <p>Intermediate</p>
+                <h3>REST APIs</h3>
+                <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
+                <h3>HTML5</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Experienced</p>
               </div>
             </article>
           </div>
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
   </section>
-  <section id="projects">
+   <section id="projects" class="fade-in-on-scroll">
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container">
@@ -276,7 +290,7 @@
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
-  <section id="contact">
+  <section id="contact" class="fade-in-on-scroll">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
@@ -294,7 +308,8 @@
       </div>
     </div>
   </section>
-  <footer>
+
+   <footer>
     <nav>
       <div class="nav-links-container">
         <ul class="nav-links">
@@ -307,7 +322,34 @@
     </nav>
     <p>Copyright &#169; 2025 Muhammad Usman. All Rights Reserved.</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    // Hamburger menu toggle
+    function toggleMenu() {
+      const menuLinks = document.querySelector(".menu-links");
+      menuLinks.classList.toggle("active");
+    }
+
+    // Fade in on scroll
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85
+      );
+    }
+
+    function fadeInOnScroll() {
+      const fadeEls = document.querySelectorAll('.fade-in-on-scroll');
+      fadeEls.forEach(el => {
+        if (isElementInViewport(el)) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+  </script>
 </body>
 
 </html>
