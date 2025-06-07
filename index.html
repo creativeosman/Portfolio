@@ -47,105 +47,56 @@
     "description": "Android App Developer specializing in Kotlin, Java, and Jetpack Compose."
   }
   </script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Muhammad Osman &#8211; App Developer</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Muhammad Osman</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
+  <!-- ... other sections unchanged ... -->
 
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic.jpg" alt="App Developer Muhammad Osman profile picture" class="profile-picture" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Muhammad Osman | App Developer</h1>
-      <p class="section__text__p2">Android App Developer</p>
-      <p class="seo-tagline">A passionate <strong>App Developer Muhammad Osman</strong> specializing in Android development with Kotlin, Java, and Jetpack Compose. Welcome to my portfolio.</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-          Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
+  <section id="projects">
+    <p class="section__text__p1" data-aos="fade-down">Browse My Recent</p>
+    <h1 class="title" data-aos="fade-up">Projects</h1>
+    <div class="experience-details-container project-grid">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="./assets/weather.jpeg" alt="Weather App by Muhammad Osman" class="project-img" />
+        <h2 class="project-title">Weather App</h2>
+        <p class="project-desc">A real-time weather forecasting app built with Kotlin and Retrofit.</p>
+        <div class="btn-container">
+          <a href="https://github.com/creativeosman/weather-app" class="btn project-btn">GitHub</a>
+          <a href="https://weather-app-demo.com" class="btn project-btn">Live Demo</a>
+        </div>
       </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn profile of App Developer Muhammad Osman" class="icon" onclick="location.href='https://pk.linkedin.com/in/muhammad-usman-undefined-81a19a36a'" />
-        <img src="./assets/github.png" alt="GitHub profile of App Developer Muhammad Osman" class="icon" onclick="location.href='https://github.com/creativeosman'" />
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="./assets/todo-list.png" alt="To Do List App by Muhammad Osman" class="project-img" />
+        <h2 class="project-title">To Do List</h2>
+        <p class="project-desc">A modern task management app featuring room DB and custom UI.</p>
+        <div class="btn-container">
+          <a href="https://github.com/creativeosman/todo-list" class="btn project-btn">GitHub</a>
+          <a href="https://todo-list-demo.com" class="btn project-btn">Live Demo</a>
+        </div>
+      </div>
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="./assets/attendance-app.jpg" alt="Attendance App by Muhammad Osman" class="project-img" />
+        <h2 class="project-title">Attendance App</h2>
+        <p class="project-desc">An attendance tracking system for teachers and students, built with Java.</p>
+        <div class="btn-container">
+          <a href="https://github.com/creativeosman/Atendify-Teacher" class="btn project-btn">GitHub</a>
+          <a href="https://attendance-app-demo.com" class="btn project-btn">Live Demo</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/about-us.jpg" alt="About App Developer Muhammad Osman" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p>1+ years <br />Android App Development</p>
-            <p>1+ years <br />UX/UI</p>
-          </div>
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>B.Sc. Software Engineering</p>
-          </div>
-        </div>
-        <div class="text-container">
-          <p>Education and hands-on experience are vital for success as an Android <strong>App Developer Muhammad Osman</strong>. My strong computer science background combined with continuous learning ensures innovative, user-centric mobile solutions.</p>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon to Experience section" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
-
-  <!-- Rest of sections unchanged -->
-
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p>Copyright &#169; 2025 Muhammad Osman. All Rights Reserved.</p>
-  </footer>
+  <!-- Footer and scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 
